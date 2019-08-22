@@ -1,0 +1,12 @@
+projects:
+  blog:
+    schemaPath: ../src/generated/prisma.graphql
+    extensions:
+      endpoints:
+        default: http://127.0.0.1:4466/blog
+      prisma: prisma.yml
+      codegen:
+        output:
+          typings: prisma.ts
+        generator: typegen
+        language: typescript

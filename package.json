@@ -1,0 +1,29 @@
+{
+  "name": "blog-prisma",
+  "version": "1.0.0",
+  "description": "graphql-prisma server for blog",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "dotenv -- nodemon --inspect src/index.js",
+    "dev2": "dotenv -- nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-shield": "^2.1.0",
+    "graphql-yoga": "^1.14.6",
+    "jsonwebtoken": "^8.2.2",
+    "mysql": "^2.16.0",
+    "prisma-binding": "^2.0.2"
+  },
+  "devDependencies": {
+    "dotenv-cli": "1.4.0",
+    "graphql-cli": "2.17.0",
+    "nodemon": "1.18.6",
+    "prisma": "1.20.7"
+  },
+  "resolutions": {
+    "graphql": "^0.13.0",
+    "**/graphql": "^0.13.0"
+  }
+}

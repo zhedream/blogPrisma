@@ -1,0 +1,70 @@
+type Author {
+  id: ID! @id   #id
+  username: String! @unique  #用户名
+  email: String! @unique  #用户邮箱
+  avatar:String   #用户签字图片路径
+  password: String!  #用户密码
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Visitor{
+  id: ID! @id
+  name: String
+  email: String @unique
+  hash: String # name与email 的哈西
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+# 文章表
+type Article{
+  id: ID! @id
+  title: String!
+  content: String
+  tags: [Tag!]!
+  isPublished: Boolean! @default(value: false)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+## 标签表
+type Tag{
+  id: ID! @id
+  name: String # 标签名
+  articles: [Article!]!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+## 大分类
+type Category{
+    id: ID! @id
+  name: String # 分类名
+  articles: [Article!]!
+}
+# 评论表
+type Comment{
+  id: ID! @id
+  content: String!
+  name: String
+  email: String @unique
+  article: Article! @relation(link: INLINE) # 属于哪一篇文章
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+# 留言 表
+type Message{
+  id: ID! @id
+  content: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+## 主题
+type Subject{
+  id: ID! @id
+  name: String
+  article: [Article!]!
+
+}
+enum QuXianType{
+  Standard    #标准曲线
+  Instrument  #仪器曲线
+}

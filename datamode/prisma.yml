@@ -1,0 +1,12 @@
+endpoint: http://127.0.0.1:4466/blog
+datamodel: datamodel.graphql
+secret: iow-blog
+
+hooks:
+  post-deploy:
+    - echo "Deployment finished"
+    - graphql get-schema --project blog
+    - graphql codegen
+generate:
+    - generator: graphql-schema
+      output: ../src/generated/prisma.graphql
