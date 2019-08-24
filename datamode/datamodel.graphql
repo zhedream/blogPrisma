@@ -20,8 +20,15 @@ type Visitor{
 type Article{
   id: ID! @id
   title: String!
-  content: String
-  tags: [Tag!]!
+  desc: String # 描述
+  md: String # MD 文
+  html: String # MD 
+  catalogue: String # 
+  clickCount: Int @default(value: 0) # 点击次数
+  readCount: Int @default(value: 0) # 阅读次数
+  commentCount: Int @default(value: 0) # 评论次数
+  type: Category # 文章分类- 一个分类
+  tags: [Tag!]! # 多个标签
   isPublished: Boolean! @default(value: false)
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
@@ -29,23 +36,25 @@ type Article{
 ## 标签表
 type Tag{
   id: ID! @id
-  name: String # 标签名
+  name: String @unique # 标签名
   articles: [Article!]!
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
 ## 大分类
 type Category{
-    id: ID! @id
-  name: String # 分类名
+  id: ID! @id
+  name: String @unique # 分类名
   articles: [Article!]!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
 }
 # 评论表
 type Comment{
   id: ID! @id
   content: String!
   name: String
-  email: String @unique
+  email: String 
   article: Article! @relation(link: INLINE) # 属于哪一篇文章
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
