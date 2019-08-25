@@ -1,13 +1,6 @@
  const article=  {
-    subscribe: async (parent, args, context) => {
-      return context.db.$subscribe
-        .article({
-          mutation_in: ['CREATED', 'UPDATED'],
-        }).node()
-    },
-    resolve: payload => {
-      return payload
-    },
+    subscribe: async (parent, args, context,info) =>  context.db.subscription.article({},info),
+    resolve: playload =>  playload.article
   }
 module.exports = {
   article,
