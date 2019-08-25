@@ -8,5 +8,5 @@ hooks:
     - graphql get-schema --project blog
     - graphql codegen
 generate:
-    - generator: graphql-schema
-      output: ../src/generated/prisma.graphql
+  - generator: javascript-client
+    output: ../src/generated/prisma-client/

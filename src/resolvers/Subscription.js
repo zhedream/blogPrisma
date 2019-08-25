@@ -1,13 +1,12 @@
- article=  {
+ const article=  {
     subscribe: async (parent, args, context) => {
       return context.db.$subscribe
         .article({
           mutation_in: ['CREATED', 'UPDATED'],
-        })
-        .node()
+        }).node()
     },
-    resolve: ArticleSubscriptionPayload => {
-      return ArticleSubscriptionPayload
+    resolve: payload => {
+      return payload
     },
   }
 module.exports = {
