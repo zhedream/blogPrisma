@@ -8,7 +8,7 @@ module.exports = {
 
     // First application
     {
-      name: 'blog',
+      name: 'blogPrisma',
       script: 'src/index.js',
       env: {
         COMMON_VARIABLE: 'true'
