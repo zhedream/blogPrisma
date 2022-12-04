@@ -15,7 +15,7 @@
 
 "@babel/runtime@^7.0.0":
   version "7.6.3"
-  resolved "http://r.cnpmjs.org/@babel/runtime/download/@babel/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
+  resolved "https://r.cnpmjs.org/@babel/runtime/download/@babel/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
   integrity sha1-k1Eix0xz0iQMr9Mt21/Cps01zx8=
   dependencies:
     regenerator-runtime "^0.13.2"
@@ -79,7 +79,7 @@
 
 "@types/bson@*":
   version "4.0.0"
-  resolved "http://r.cnpmjs.org/@types/bson/download/@types/bson-4.0.0.tgz#9073772679d749116eb1dfca56f8eaac6d59cc7a"
+  resolved "https://r.cnpmjs.org/@types/bson/download/@types/bson-4.0.0.tgz#9073772679d749116eb1dfca56f8eaac6d59cc7a"
   integrity sha1-kHN3JnnXSRFusd/KVvjqrG1ZzHo=
   dependencies:
     "@types/node" "*"
@@ -130,7 +130,7 @@
 
 "@types/express@^4.16.1":
   version "4.17.1"
-  resolved "http://r.cnpmjs.org/@types/express/download/@types/express-4.17.1.tgz#4cf7849ae3b47125a567dfee18bfca4254b88c5c"
+  resolved "https://r.cnpmjs.org/@types/express/download/@types/express-4.17.1.tgz#4cf7849ae3b47125a567dfee18bfca4254b88c5c"
   integrity sha1-TPeEmuO0cSWlZ9/uGL/KQlS4jFw=
   dependencies:
     "@types/body-parser" "*"
@@ -166,7 +166,7 @@
 
 "@types/mongodb@^3.1.14":
   version "3.3.7"
-  resolved "http://r.cnpmjs.org/@types/mongodb/download/@types/mongodb-3.3.7.tgz#f11fbad6ea48135634bce7e70080031cb35c5c84"
+  resolved "https://r.cnpmjs.org/@types/mongodb/download/@types/mongodb-3.3.7.tgz#f11fbad6ea48135634bce7e70080031cb35c5c84"
   integrity sha1-8R+61upIE1Y0vOfnAIADHLNcXIQ=
   dependencies:
     "@types/bson" "*"
@@ -174,7 +174,7 @@
 
 "@types/mysql@^2.15.5":
   version "2.15.7"
-  resolved "http://r.cnpmjs.org/@types/mysql/download/@types/mysql-2.15.7.tgz#7b803d0d8f418ee7edbdaceb1e7a43b322b346dc"
+  resolved "https://r.cnpmjs.org/@types/mysql/download/@types/mysql-2.15.7.tgz#7b803d0d8f418ee7edbdaceb1e7a43b322b346dc"
   integrity sha1-e4A9DY9BjuftvazrHnpDsyKzRtw=
   dependencies:
     "@types/node" "*"
@@ -209,7 +209,7 @@
 
 "@types/yup@0.26.24":
   version "0.26.24"
-  resolved "http://r.cnpmjs.org/@types/yup/download/@types/yup-0.26.24.tgz#c24170b3a5c867b4fabd49fcc42fe45f780cb153"
+  resolved "https://r.cnpmjs.org/@types/yup/download/@types/yup-0.26.24.tgz#c24170b3a5c867b4fabd49fcc42fe45f780cb153"
   integrity sha1-wkFws6XIZ7T6vUn8xC/kX3gMsVM=
 
 "@types/zen-observable@^0.5.3":
@@ -219,7 +219,7 @@
 
 "@wry/equality@^0.1.2":
   version "0.1.9"
-  resolved "http://r.cnpmjs.org/@wry/equality/download/@wry/equality-0.1.9.tgz#b13e18b7a8053c6858aa6c85b54911fb31e3a909"
+  resolved "https://r.cnpmjs.org/@wry/equality/download/@wry/equality-0.1.9.tgz#b13e18b7a8053c6858aa6c85b54911fb31e3a909"
   integrity sha1-sT4Yt6gFPGhYqmyFtUkR+zHjqQk=
   dependencies:
     tslib "^1.9.3"
@@ -364,7 +364,7 @@ apollo-codegen@^0.19.1:
 
 apollo-link-error@1.1.12:
   version "1.1.12"
-  resolved "http://r.cnpmjs.org/apollo-link-error/download/apollo-link-error-1.1.12.tgz#e24487bb3c30af0654047611cda87038afbacbf9"
+  resolved "https://r.cnpmjs.org/apollo-link-error/download/apollo-link-error-1.1.12.tgz#e24487bb3c30af0654047611cda87038afbacbf9"
   integrity sha1-4kSHuzwwrwZUBHYRzahwOK+6y/k=
   dependencies:
     apollo-link "^1.2.13"
@@ -373,7 +373,7 @@ apollo-link-error@1.1.12:
 
 apollo-link-http-common@^0.2.15:
   version "0.2.15"
-  resolved "http://r.cnpmjs.org/apollo-link-http-common/download/apollo-link-http-common-0.2.15.tgz#304e67705122bf69a9abaded4351b10bc5efd6d9"
+  resolved "https://r.cnpmjs.org/apollo-link-http-common/download/apollo-link-http-common-0.2.15.tgz#304e67705122bf69a9abaded4351b10bc5efd6d9"
   integrity sha1-ME5ncFEiv2mpq63tQ1GxC8Xv1tk=
   dependencies:
     apollo-link "^1.2.13"
@@ -382,7 +382,7 @@ apollo-link-http-common@^0.2.15:
 
 apollo-link-ws@1.0.19:
   version "1.0.19"
-  resolved "http://r.cnpmjs.org/apollo-link-ws/download/apollo-link-ws-1.0.19.tgz#dfa871d4df883a8777c9556c872fc892e103daa5"
+  resolved "https://r.cnpmjs.org/apollo-link-ws/download/apollo-link-ws-1.0.19.tgz#dfa871d4df883a8777c9556c872fc892e103daa5"
   integrity sha1-36hx1N+IOod3yVVshy/IkuED2qU=
   dependencies:
     apollo-link "^1.2.13"
@@ -390,7 +390,7 @@ apollo-link-ws@1.0.19:
 
 apollo-link@1.2.13, apollo-link@^1.2.13:
   version "1.2.13"
-  resolved "http://r.cnpmjs.org/apollo-link/download/apollo-link-1.2.13.tgz#dff00fbf19dfcd90fddbc14b6a3f9a771acac6c4"
+  resolved "https://r.cnpmjs.org/apollo-link/download/apollo-link-1.2.13.tgz#dff00fbf19dfcd90fddbc14b6a3f9a771acac6c4"
   integrity sha1-3/APvxnfzZD928FLaj+adxrKxsQ=
   dependencies:
     apollo-utilities "^1.3.0"
@@ -461,7 +461,7 @@ apollo-utilities@^1.0.0, apollo-utilities@^1.0.1:
 
 apollo-utilities@^1.3.0:
   version "1.3.2"
-  resolved "http://r.cnpmjs.org/apollo-utilities/download/apollo-utilities-1.3.2.tgz#8cbdcf8b012f664cd6cb5767f6130f5aed9115c9"
+  resolved "https://r.cnpmjs.org/apollo-utilities/download/apollo-utilities-1.3.2.tgz#8cbdcf8b012f664cd6cb5767f6130f5aed9115c9"
   integrity sha1-jL3PiwEvZkzWy1dn9hMPWu2RFck=
   dependencies:
     "@wry/equality" "^0.1.2"
@@ -476,7 +476,7 @@ aproba@^1.0.3:
 
 arch@^2.1.0:
   version "2.1.1"
-  resolved "http://r.cnpmjs.org/arch/download/arch-2.1.1.tgz#8f5c2731aa35a30929221bb0640eed65175ec84e"
+  resolved "https://r.cnpmjs.org/arch/download/arch-2.1.1.tgz#8f5c2731aa35a30929221bb0640eed65175ec84e"
   integrity sha1-j1wnMao1owkpIhuwZA7tZRdeyE4=
 
 archiver-utils@^1.3.0:
@@ -586,7 +586,7 @@ assign-symbols@^1.0.0:
 
 async-each@^1.0.1:
   version "1.0.3"
-  resolved "http://r.cnpmjs.org/async-each/download/async-each-1.0.3.tgz#b727dbf87d7651602f06f4d4ac387f47d91b0cbf"
+  resolved "https://r.cnpmjs.org/async-each/download/async-each-1.0.3.tgz#b727dbf87d7651602f06f4d4ac387f47d91b0cbf"
   integrity sha1-tyfb+H12UWAvBvTUrDh/R9kbDL8=
 
 async-limiter@~1.0.0:
@@ -778,7 +778,7 @@ braces@^2.3.1, braces@^2.3.2:
 
 bson@^1.1.1:
   version "1.1.1"
-  resolved "http://r.cnpmjs.org/bson/download/bson-1.1.1.tgz#4330f5e99104c4e751e7351859e2d408279f2f13"
+  resolved "https://r.cnpmjs.org/bson/download/bson-1.1.1.tgz#4330f5e99104c4e751e7351859e2d408279f2f13"
   integrity sha1-QzD16ZEExOdR5zUYWeLUCCefLxM=
 
 buffer-alloc-unsafe@^1.1.0:
@@ -989,7 +989,7 @@ charm@^1.0.2:
 
 chokidar@^2.1.8:
   version "2.1.8"
-  resolved "http://r.cnpmjs.org/chokidar/download/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
+  resolved "https://r.cnpmjs.org/chokidar/download/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
   integrity sha1-gEs6e2qZNYw8XGHnHYco8EHP+Rc=
   dependencies:
     anymatch "^2.0.0"
@@ -1057,7 +1057,7 @@ cli-width@^2.0.0:
 
 clipboardy@^1.2.3:
   version "1.2.3"
-  resolved "http://r.cnpmjs.org/clipboardy/download/clipboardy-1.2.3.tgz#0526361bf78724c1f20be248d428e365433c07ef"
+  resolved "https://r.cnpmjs.org/clipboardy/download/clipboardy-1.2.3.tgz#0526361bf78724c1f20be248d428e365433c07ef"
   integrity sha1-BSY2G/eHJMHyC+JI1CjjZUM8B+8=
   dependencies:
     arch "^2.1.0"
@@ -1291,7 +1291,7 @@ cross-fetch@2.2.2:
 
 cross-fetch@3.0.4:
   version "3.0.4"
-  resolved "http://r.cnpmjs.org/cross-fetch/download/cross-fetch-3.0.4.tgz#7bef7020207e684a7638ef5f2f698e24d9eb283c"
+  resolved "https://r.cnpmjs.org/cross-fetch/download/cross-fetch-3.0.4.tgz#7bef7020207e684a7638ef5f2f698e24d9eb283c"
   integrity sha1-e+9wICB+aEp2OO9fL2mOJNnrKDw=
   dependencies:
     node-fetch "2.6.0"
@@ -1319,7 +1319,7 @@ cross-spawn@^6.0.0, cross-spawn@^6.0.5:
 
 cross-spawn@^7.0.1:
   version "7.0.1"
-  resolved "http://r.cnpmjs.org/cross-spawn/download/cross-spawn-7.0.1.tgz#0ab56286e0f7c24e153d04cc2aa027e43a9a5d14"
+  resolved "https://r.cnpmjs.org/cross-spawn/download/cross-spawn-7.0.1.tgz#0ab56286e0f7c24e153d04cc2aa027e43a9a5d14"
   integrity sha1-CrVihuD3wk4VPQTMKqAn5DqaXRQ=
   dependencies:
     path-key "^3.1.0"
@@ -1390,7 +1390,7 @@ debug@^4.1.0:
 
 debug@^4.1.1:
   version "4.1.1"
-  resolved "http://r.cnpmjs.org/debug/download/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  resolved "https://r.cnpmjs.org/debug/download/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   integrity sha1-O3ImAlUQnGtYnO4FDx1RYTlmR5E=
   dependencies:
     ms "^2.1.1"
@@ -1401,9 +1401,9 @@ decamelize@^1.1.1, decamelize@^1.2.0:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "http://registry.npm.taobao.org/decode-uri-component/download/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 deep-extend@^0.6.0:
   version "0.6.0"
@@ -1497,7 +1497,7 @@ dir-glob@^2.0.0:
 
 directory-tree@2.2.1:
   version "2.2.1"
-  resolved "http://r.cnpmjs.org/directory-tree/download/directory-tree-2.2.1.tgz#3d56ce8a82a6c9612ac0879c6b4ed9ea54e89bde"
+  resolved "https://r.cnpmjs.org/directory-tree/download/directory-tree-2.2.1.tgz#3d56ce8a82a6c9612ac0879c6b4ed9ea54e89bde"
   integrity sha1-PVbOioKmyWEqwIeca07Z6lTom94=
 
 disparity@^2.0.0:
@@ -1524,7 +1524,7 @@ dot-prop@^4.1.0:
 
 dotenv-cli@3.0.0:
   version "3.0.0"
-  resolved "http://r.cnpmjs.org/dotenv-cli/download/dotenv-cli-3.0.0.tgz#8d27ab95376d316e0d0f31e365535e99fb9734bf"
+  resolved "https://r.cnpmjs.org/dotenv-cli/download/dotenv-cli-3.0.0.tgz#8d27ab95376d316e0d0f31e365535e99fb9734bf"
   integrity sha1-jSerlTdtMW4NDzHjZVNemfuXNL8=
   dependencies:
     cross-spawn "^7.0.1"
@@ -1534,7 +1534,7 @@ dotenv-cli@3.0.0:
 
 dotenv-expand@^5.1.0:
   version "5.1.0"
-  resolved "http://r.cnpmjs.org/dotenv-expand/download/dotenv-expand-5.1.0.tgz#3fbaf020bfd794884072ea26b1e9791d45a629f0"
+  resolved "https://r.cnpmjs.org/dotenv-expand/download/dotenv-expand-5.1.0.tgz#3fbaf020bfd794884072ea26b1e9791d45a629f0"
   integrity sha1-P7rwIL/XlIhAcuomsel5HUWmKfA=
 
 dotenv@^0.4.0:
@@ -1554,7 +1554,7 @@ dotenv@^5.0.0:
 
 dotenv@^8.1.0:
   version "8.2.0"
-  resolved "http://r.cnpmjs.org/dotenv/download/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  resolved "https://r.cnpmjs.org/dotenv/download/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha1-l+YZJZradQ7qPk6j4mvO6lQksWo=
 
 duplexer3@^0.1.4:
@@ -1579,7 +1579,7 @@ ecdsa-sig-formatter@1.0.10:
 
 ecdsa-sig-formatter@1.0.11:
   version "1.0.11"
-  resolved "http://r.cnpmjs.org/ecdsa-sig-formatter/download/ecdsa-sig-formatter-1.0.11.tgz#ae0f0fa2d85045ef14a817daa3ce9acd0489e5bf"
+  resolved "https://r.cnpmjs.org/ecdsa-sig-formatter/download/ecdsa-sig-formatter-1.0.11.tgz#ae0f0fa2d85045ef14a817daa3ce9acd0489e5bf"
   integrity sha1-rg8PothQRe8UqBfao86azQSJ5b8=
   dependencies:
     safe-buffer "^5.0.1"
@@ -1702,7 +1702,7 @@ execa@^0.7.0:
 
 execa@^0.8.0:
   version "0.8.0"
-  resolved "http://r.cnpmjs.org/execa/download/execa-0.8.0.tgz#d8d76bbc1b55217ed190fd6dd49d3c774ecfc8da"
+  resolved "https://r.cnpmjs.org/execa/download/execa-0.8.0.tgz#d8d76bbc1b55217ed190fd6dd49d3c774ecfc8da"
   integrity sha1-2NdrvBtVIX7RkP1t1J08d07PyNo=
   dependencies:
     cross-spawn "^5.0.1"
@@ -1929,12 +1929,12 @@ find@^0.2.7:
 
 flow-bin@^0.87.0:
   version "0.87.0"
-  resolved "http://r.cnpmjs.org/flow-bin/download/flow-bin-0.87.0.tgz#fab7f984d8cc767e93fa9eb01cf7d57ed744f19d"
+  resolved "https://r.cnpmjs.org/flow-bin/download/flow-bin-0.87.0.tgz#fab7f984d8cc767e93fa9eb01cf7d57ed744f19d"
   integrity sha1-+rf5hNjMdn6T+p6wHPfVftdE8Z0=
 
 fn-name@~2.0.1:
   version "2.0.1"
-  resolved "http://r.cnpmjs.org/fn-name/download/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
+  resolved "https://r.cnpmjs.org/fn-name/download/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
   integrity sha1-UhTXU3pNBqSjAcDMJi/rhBiAAuc=
 
 for-in@^1.0.2:
@@ -2033,7 +2033,7 @@ fs.realpath@^1.0.0:
 
 fsevents@^1.2.7:
   version "1.2.9"
-  resolved "http://r.cnpmjs.org/fsevents/download/fsevents-1.2.9.tgz#3f5ed66583ccd6f400b5a00db6f7e861363e388f"
+  resolved "https://r.cnpmjs.org/fsevents/download/fsevents-1.2.9.tgz#3f5ed66583ccd6f400b5a00db6f7e861363e388f"
   integrity sha1-P17WZYPM1vQAtaANtvfoYTY+OI8=
   dependencies:
     nan "^2.12.1"
@@ -2189,7 +2189,7 @@ graphcool-yml@0.4.15:
 
 graphql-binding@2.5.2:
   version "2.5.2"
-  resolved "http://r.cnpmjs.org/graphql-binding/download/graphql-binding-2.5.2.tgz#b311e0e8ccbe04ae3346bc236552ef963fcaf4db"
+  resolved "https://r.cnpmjs.org/graphql-binding/download/graphql-binding-2.5.2.tgz#b311e0e8ccbe04ae3346bc236552ef963fcaf4db"
   integrity sha1-sxHg6My+BK4zRrwjZVLvlj/K9Ns=
   dependencies:
     graphql "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
@@ -2381,7 +2381,7 @@ graphql-schema-linter@0.1.1:
 
 graphql-shield@^7.0.0:
   version "7.0.0"
-  resolved "http://r.cnpmjs.org/graphql-shield/download/graphql-shield-7.0.0.tgz#0cdca5c16af4ba7dd4fbcce6df279c5c8e463452"
+  resolved "https://r.cnpmjs.org/graphql-shield/download/graphql-shield-7.0.0.tgz#0cdca5c16af4ba7dd4fbcce6df279c5c8e463452"
   integrity sha1-DNylwWr0un3U+8zm3yecXI5GNFI=
   dependencies:
     "@types/yup" "0.26.24"
@@ -2410,7 +2410,7 @@ graphql-tag@^2.10.0:
 
 graphql-tools@4.0.5:
   version "4.0.5"
-  resolved "http://r.cnpmjs.org/graphql-tools/download/graphql-tools-4.0.5.tgz#d2b41ee0a330bfef833e5cdae7e1f0b0d86b1754"
+  resolved "https://r.cnpmjs.org/graphql-tools/download/graphql-tools-4.0.5.tgz#d2b41ee0a330bfef833e5cdae7e1f0b0d86b1754"
   integrity sha1-0rQe4KMwv++DPlza5+HwsNhrF1Q=
   dependencies:
     apollo-link "^1.2.3"
@@ -3072,7 +3072,7 @@ jsonify@~0.0.0:
 
 jsonwebtoken@8.5.1, jsonwebtoken@^8.5.1:
   version "8.5.1"
-  resolved "http://r.cnpmjs.org/jsonwebtoken/download/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
+  resolved "https://r.cnpmjs.org/jsonwebtoken/download/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
   integrity sha1-AOceC431TCEhofJhN98igGc7zA0=
   dependencies:
     jws "^3.2.2"
@@ -3122,7 +3122,7 @@ jwa@^1.1.5:
 
 jwa@^1.4.1:
   version "1.4.1"
-  resolved "http://r.cnpmjs.org/jwa/download/jwa-1.4.1.tgz#743c32985cb9e98655530d53641b66c8645b039a"
+  resolved "https://r.cnpmjs.org/jwa/download/jwa-1.4.1.tgz#743c32985cb9e98655530d53641b66c8645b039a"
   integrity sha1-dDwymFy56YZVUw1TZBtmyGRbA5o=
   dependencies:
     buffer-equal-constant-time "1.0.1"
@@ -3139,7 +3139,7 @@ jws@^3.1.5:
 
 jws@^3.2.2:
   version "3.2.2"
-  resolved "http://r.cnpmjs.org/jws/download/jws-3.2.2.tgz#001099f3639468c9414000e99995fa52fb478304"
+  resolved "https://r.cnpmjs.org/jws/download/jws-3.2.2.tgz#001099f3639468c9414000e99995fa52fb478304"
   integrity sha1-ABCZ82OUaMlBQADpmZX6UvtHgwQ=
   dependencies:
     jwa "^1.4.1"
@@ -3206,7 +3206,7 @@ lcid@^2.0.0:
 
 lightercollective@^0.3.0:
   version "0.3.0"
-  resolved "http://r.cnpmjs.org/lightercollective/download/lightercollective-0.3.0.tgz#1f07638642ec645d70bdb69ab2777676f35a28f0"
+  resolved "https://r.cnpmjs.org/lightercollective/download/lightercollective-0.3.0.tgz#1f07638642ec645d70bdb69ab2777676f35a28f0"
   integrity sha1-HwdjhkLsZF1wvbaasnd2dvNaKPA=
 
 load-json-file@^2.0.0:
@@ -3377,7 +3377,7 @@ lodash@^4.13.1, lodash@^4.16.4, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.4,
 
 lodash@^4.17.11:
   version "4.17.15"
-  resolved "http://r.cnpmjs.org/lodash/download/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  resolved "https://r.cnpmjs.org/lodash/download/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
 
 log-symbols@^2.1.0:
@@ -3498,7 +3498,7 @@ mem@^4.0.0:
 
 memory-pager@^1.0.2:
   version "1.5.0"
-  resolved "http://r.cnpmjs.org/memory-pager/download/memory-pager-1.5.0.tgz#d8751655d22d384682741c972f2c3d6dfa3e66b5"
+  resolved "https://r.cnpmjs.org/memory-pager/download/memory-pager-1.5.0.tgz#d8751655d22d384682741c972f2c3d6dfa3e66b5"
   integrity sha1-2HUWVdItOEaCdByXLyw9bfo+ZrU=
 
 merge-descriptors@1.0.1:
@@ -3606,7 +3606,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
 
 mongodb@^3.1.10:
   version "3.3.3"
-  resolved "http://r.cnpmjs.org/mongodb/download/mongodb-3.3.3.tgz#509cad2225a1c56c65a331ed73a0d5d4ed5cbe67"
+  resolved "https://r.cnpmjs.org/mongodb/download/mongodb-3.3.3.tgz#509cad2225a1c56c65a331ed73a0d5d4ed5cbe67"
   integrity sha1-UJytIiWhxWxlozHtc6DV1O1cvmc=
   dependencies:
     bson "^1.1.1"
@@ -3652,7 +3652,7 @@ mysql@^2.16.0, mysql@^2.17.1:
 
 nan@^2.12.1:
   version "2.14.0"
-  resolved "http://r.cnpmjs.org/nan/download/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
+  resolved "https://r.cnpmjs.org/nan/download/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha1-eBj3IgJ7JFmobwKV1DTR/CM2xSw=
 
 nanomatch@^1.2.9:
@@ -3712,7 +3712,7 @@ node-fetch@2.1.2:
 
 node-fetch@2.6.0:
   version "2.6.0"
-  resolved "http://r.cnpmjs.org/node-fetch/download/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  resolved "https://r.cnpmjs.org/node-fetch/download/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha1-5jNFY4bUqlWGP2dqerDaqP3ssP0=
 
 node-fetch@^1.0.1, node-fetch@^1.7.3:
@@ -3735,7 +3735,7 @@ node-forge@^0.7.1:
 
 node-pre-gyp@^0.12.0:
   version "0.12.0"
-  resolved "http://r.cnpmjs.org/node-pre-gyp/download/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
+  resolved "https://r.cnpmjs.org/node-pre-gyp/download/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
   integrity sha1-ObpLsUOdoDApX4meO1ILd4V2YUk=
   dependencies:
     detect-libc "^1.0.2"
@@ -3756,7 +3756,7 @@ node-request-by-swagger@^1.0.6:
 
 nodemon@1.19.4:
   version "1.19.4"
-  resolved "http://r.cnpmjs.org/nodemon/download/nodemon-1.19.4.tgz#56db5c607408e0fdf8920d2b444819af1aae0971"
+  resolved "https://r.cnpmjs.org/nodemon/download/nodemon-1.19.4.tgz#56db5c607408e0fdf8920d2b444819af1aae0971"
   integrity sha1-VttcYHQI4P34kg0rREgZrxquCXE=
   dependencies:
     chokidar "^2.1.8"
@@ -3804,7 +3804,7 @@ normalize-path@^2.0.0, normalize-path@^2.1.1:
 
 normalize-path@^3.0.0:
   version "3.0.0"
-  resolved "http://r.cnpmjs.org/normalize-path/download/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
+  resolved "https://r.cnpmjs.org/normalize-path/download/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=
 
 npm-bundled@^1.0.1:
@@ -3899,7 +3899,7 @@ object-copy@^0.1.0:
 
 object-hash@^2.0.0:
   version "2.0.0"
-  resolved "http://r.cnpmjs.org/object-hash/download/object-hash-2.0.0.tgz#7c4cc341eb8b53367312a7c546142f00c9e0ea20"
+  resolved "https://r.cnpmjs.org/object-hash/download/object-hash-2.0.0.tgz#7c4cc341eb8b53367312a7c546142f00c9e0ea20"
   integrity sha1-fEzDQeuLUzZzEqfFRhQvAMng6iA=
 
 object-path-immutable@^3.0.0:
@@ -4165,7 +4165,7 @@ path-key@^2.0.0, path-key@^2.0.1:
 
 path-key@^3.1.0:
   version "3.1.0"
-  resolved "http://r.cnpmjs.org/path-key/download/path-key-3.1.0.tgz#99a10d870a803bdd5ee6f0470e58dfcd2f9a54d3"
+  resolved "https://r.cnpmjs.org/path-key/download/path-key-3.1.0.tgz#99a10d870a803bdd5ee6f0470e58dfcd2f9a54d3"
   integrity sha1-maENhwqAO91e5vBHDljfzS+aVNM=
 
 path-to-regexp@0.1.7:
@@ -4302,12 +4302,12 @@ prepend-http@^1.0.1:
 
 prettier@1.16.4:
   version "1.16.4"
-  resolved "http://r.cnpmjs.org/prettier/download/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
+  resolved "https://r.cnpmjs.org/prettier/download/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha1-c+N+c+AYrS25x2dC4mR+IXkMlxc=
 
 prisma-binding@^2.3.16:
   version "2.3.16"
-  resolved "http://r.cnpmjs.org/prisma-binding/download/prisma-binding-2.3.16.tgz#c798d48e3220d2949e0e380ad4fe838f78c1c0e2"
+  resolved "https://r.cnpmjs.org/prisma-binding/download/prisma-binding-2.3.16.tgz#c798d48e3220d2949e0e380ad4fe838f78c1c0e2"
   integrity sha1-x5jUjjIg0pSeDjgK1P6Dj3jBwOI=
   dependencies:
     apollo-link "1.2.13"
@@ -4325,7 +4325,7 @@ prisma-binding@^2.3.16:
 
 prisma-cli-core@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-cli-core/download/prisma-cli-core-1.34.10.tgz#2bfba38350dc553f07e1a8df921efd5a1fc1e539"
+  resolved "https://r.cnpmjs.org/prisma-cli-core/download/prisma-cli-core-1.34.10.tgz#2bfba38350dc553f07e1a8df921efd5a1fc1e539"
   integrity sha1-K/ujg1DcVT8H4ajfkh79Wh/B5Tk=
   dependencies:
     "@types/express" "^4.16.1"
@@ -4367,7 +4367,7 @@ prisma-cli-core@1.34.10:
 
 prisma-cli-engine@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-cli-engine/download/prisma-cli-engine-1.34.10.tgz#01e43c07dc964f38daa2fe47b0fcdc368a0d6927"
+  resolved "https://r.cnpmjs.org/prisma-cli-engine/download/prisma-cli-engine-1.34.10.tgz#01e43c07dc964f38daa2fe47b0fcdc368a0d6927"
   integrity sha1-AeQ8B9yWTzjaov5HsPzcNooNaSc=
   dependencies:
     "@heroku/linewrap" "^1.0.0"
@@ -4418,7 +4418,7 @@ prisma-cli-engine@1.34.10:
 
 prisma-client-lib@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-client-lib/download/prisma-client-lib-1.34.10.tgz#ae67e2cbcfc82e537c3e96f214233bf5361d0116"
+  resolved "https://r.cnpmjs.org/prisma-client-lib/download/prisma-client-lib-1.34.10.tgz#ae67e2cbcfc82e537c3e96f214233bf5361d0116"
   integrity sha1-rmfiy8/ILlN8PpbyFCM79TYdARY=
   dependencies:
     "@types/node" "^10.12.0"
@@ -4439,7 +4439,7 @@ prisma-client-lib@1.34.10:
 
 prisma-datamodel@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-datamodel/download/prisma-datamodel-1.34.10.tgz#ce47dba4cff1dfaed5b3ad3302e53308baa9bffe"
+  resolved "https://r.cnpmjs.org/prisma-datamodel/download/prisma-datamodel-1.34.10.tgz#ce47dba4cff1dfaed5b3ad3302e53308baa9bffe"
   integrity sha1-zkfbpM/x367Vs60zAuUzCLqpv/4=
   dependencies:
     debug "^4.1.1"
@@ -4449,7 +4449,7 @@ prisma-datamodel@1.34.10:
 
 prisma-db-introspection@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-db-introspection/download/prisma-db-introspection-1.34.10.tgz#ff4f63517f34ca531f3293ddbb0d26ace96dd756"
+  resolved "https://r.cnpmjs.org/prisma-db-introspection/download/prisma-db-introspection-1.34.10.tgz#ff4f63517f34ca531f3293ddbb0d26ace96dd756"
   integrity sha1-/09jUX80ylMfMpPduw0mrOlt11Y=
   dependencies:
     "@types/mongodb" "^3.1.14"
@@ -4466,7 +4466,7 @@ prisma-db-introspection@1.34.10:
 
 prisma-generate-schema@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-generate-schema/download/prisma-generate-schema-1.34.10.tgz#5b0df0c277206acaa2c02cd8f43b21c8df677f13"
+  resolved "https://r.cnpmjs.org/prisma-generate-schema/download/prisma-generate-schema-1.34.10.tgz#5b0df0c277206acaa2c02cd8f43b21c8df677f13"
   integrity sha1-Ww3wwncgasqiwCzY9DshyN9nfxM=
   dependencies:
     graphql "^14.3.0"
@@ -4505,7 +4505,7 @@ prisma-yml@1.20.0-beta.18:
 
 prisma-yml@1.34.10:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma-yml/download/prisma-yml-1.34.10.tgz#0ef1ad3a125f54f200289cba56bdd9597f17f410"
+  resolved "https://r.cnpmjs.org/prisma-yml/download/prisma-yml-1.34.10.tgz#0ef1ad3a125f54f200289cba56bdd9597f17f410"
   integrity sha1-DvGtOhJfVPIAKJy6Vr3ZWX8X9BA=
   dependencies:
     ajv "5"
@@ -4529,7 +4529,7 @@ prisma-yml@1.34.10:
 
 prisma@^1.34.6:
   version "1.34.10"
-  resolved "http://r.cnpmjs.org/prisma/download/prisma-1.34.10.tgz#89d5835b7049092f8064f656001855373fe5f99d"
+  resolved "https://r.cnpmjs.org/prisma/download/prisma-1.34.10.tgz#89d5835b7049092f8064f656001855373fe5f99d"
   integrity sha1-idWDW3BJCS+AZPZWABhVNz/l+Z0=
   dependencies:
     fs-extra "^7.0.0"
@@ -4545,7 +4545,7 @@ process-nextick-args@~2.0.0:
 
 property-expr@^1.5.0:
   version "1.5.1"
-  resolved "http://r.cnpmjs.org/property-expr/download/property-expr-1.5.1.tgz#22e8706894a0c8e28d58735804f6ba3a3673314f"
+  resolved "https://r.cnpmjs.org/property-expr/download/property-expr-1.5.1.tgz#22e8706894a0c8e28d58735804f6ba3a3673314f"
   integrity sha1-IuhwaJSgyOKNWHNYBPa6OjZzMU8=
 
 protochain@^1.0.5:
@@ -4578,7 +4578,7 @@ psl@^1.1.24, psl@^1.1.28:
 
 pstree.remy@^1.1.7:
   version "1.1.7"
-  resolved "http://r.cnpmjs.org/pstree.remy/download/pstree.remy-1.1.7.tgz#c76963a28047ed61542dc361aa26ee55a7fa15f3"
+  resolved "https://r.cnpmjs.org/pstree.remy/download/pstree.remy-1.1.7.tgz#c76963a28047ed61542dc361aa26ee55a7fa15f3"
   integrity sha1-x2ljooBH7WFULcNhqibuVaf6FfM=
 
 punycode@1.3.2:
@@ -4684,7 +4684,7 @@ readable-stream@2.3.6, readable-stream@^2.0.0, readable-stream@^2.0.2, readable-
 
 readdirp@^2.2.1:
   version "2.2.1"
-  resolved "http://r.cnpmjs.org/readdirp/download/readdirp-2.2.1.tgz#0e87622a3325aa33e892285caf8b4e846529a525"
+  resolved "https://r.cnpmjs.org/readdirp/download/readdirp-2.2.1.tgz#0e87622a3325aa33e892285caf8b4e846529a525"
   integrity sha1-DodiKjMlqjPokihcr4tOhGUppSU=
   dependencies:
     graceful-fs "^4.1.11"
@@ -4717,7 +4717,7 @@ regenerator-runtime@^0.12.0:
 
 regenerator-runtime@^0.13.2:
   version "0.13.3"
-  resolved "http://r.cnpmjs.org/regenerator-runtime/download/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
+  resolved "https://r.cnpmjs.org/regenerator-runtime/download/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha1-fPanfY9cb2Drc8X8GVWyzrAea/U=
 
 regex-not@^1.0.0, regex-not@^1.0.2:
@@ -4823,7 +4823,7 @@ require-main-filename@^1.0.1:
 
 require_optional@^1.0.1:
   version "1.0.1"
-  resolved "http://r.cnpmjs.org/require_optional/download/require_optional-1.0.1.tgz#4cf35a4247f64ca3df8c2ef208cc494b1ca8fc2e"
+  resolved "https://r.cnpmjs.org/require_optional/download/require_optional-1.0.1.tgz#4cf35a4247f64ca3df8c2ef208cc494b1ca8fc2e"
   integrity sha1-TPNaQkf2TKPfjC7yCMxJSxyo/C4=
   dependencies:
     resolve-from "^2.0.0"
@@ -4846,7 +4846,7 @@ resolve-dir@^1.0.0:
 
 resolve-from@^2.0.0:
   version "2.0.0"
-  resolved "http://r.cnpmjs.org/resolve-from/download/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
+  resolved "https://r.cnpmjs.org/resolve-from/download/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
   integrity sha1-lICrIOlP+h2egKgEx+oUdhGWa1c=
 
 resolve-from@^3.0.0:
@@ -4931,7 +4931,7 @@ safe-regex@^1.1.0:
 
 saslprep@^1.0.0:
   version "1.0.3"
-  resolved "http://r.cnpmjs.org/saslprep/download/saslprep-1.0.3.tgz#4c02f946b56cf54297e347ba1093e7acac4cf226"
+  resolved "https://r.cnpmjs.org/saslprep/download/saslprep-1.0.3.tgz#4c02f946b56cf54297e347ba1093e7acac4cf226"
   integrity sha1-TAL5RrVs9UKX40e6EJPnrKxM8iY=
   dependencies:
     sparse-bitfield "^3.0.3"
@@ -4970,7 +4970,7 @@ semver@4.3.2:
 
 semver@^5.6.0, semver@^5.7.1:
   version "5.7.1"
-  resolved "http://r.cnpmjs.org/semver/download/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
+  resolved "https://r.cnpmjs.org/semver/download/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=
 
 send@0.16.2:
@@ -5061,7 +5061,7 @@ shebang-command@^1.2.0:
 
 shebang-command@^2.0.0:
   version "2.0.0"
-  resolved "http://r.cnpmjs.org/shebang-command/download/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
+  resolved "https://r.cnpmjs.org/shebang-command/download/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
   integrity sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=
   dependencies:
     shebang-regex "^3.0.0"
@@ -5073,7 +5073,7 @@ shebang-regex@^1.0.0:
 
 shebang-regex@^3.0.0:
   version "3.0.0"
-  resolved "http://r.cnpmjs.org/shebang-regex/download/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
+  resolved "https://r.cnpmjs.org/shebang-regex/download/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
@@ -5185,7 +5185,7 @@ source-map@^0.6.0:
 
 sparse-bitfield@^3.0.3:
   version "3.0.3"
-  resolved "http://r.cnpmjs.org/sparse-bitfield/download/sparse-bitfield-3.0.3.tgz#ff4ae6e68656056ba4b3e792ab3334d38273ca11"
+  resolved "https://r.cnpmjs.org/sparse-bitfield/download/sparse-bitfield-3.0.3.tgz#ff4ae6e68656056ba4b3e792ab3334d38273ca11"
   integrity sha1-/0rm5oZWBWuks+eSqzM004JzyhE=
   dependencies:
     memory-pager "^1.0.2"
@@ -5366,7 +5366,7 @@ strip-json-comments@~2.0.1:
 
 subscriptions-transport-ws@0.9.16:
   version "0.9.16"
-  resolved "http://r.cnpmjs.org/subscriptions-transport-ws/download/subscriptions-transport-ws-0.9.16.tgz#90a422f0771d9c32069294c08608af2d47f596ec"
+  resolved "https://r.cnpmjs.org/subscriptions-transport-ws/download/subscriptions-transport-ws-0.9.16.tgz#90a422f0771d9c32069294c08608af2d47f596ec"
   integrity sha1-kKQi8HcdnDIGkpTAhgivLUf1luw=
   dependencies:
     backo2 "^1.0.2"
@@ -5425,7 +5425,7 @@ sync-exec@^0.6.2:
 
 synchronous-promise@^2.0.6:
   version "2.0.10"
-  resolved "http://r.cnpmjs.org/synchronous-promise/download/synchronous-promise-2.0.10.tgz#e64c6fd3afd25f423963353043f4a68ebd397fd8"
+  resolved "https://r.cnpmjs.org/synchronous-promise/download/synchronous-promise-2.0.10.tgz#e64c6fd3afd25f423963353043f4a68ebd397fd8"
   integrity sha1-5kxv06/SX0I5YzUwQ/Smjr05f9g=
 
 table@^4.0.1:
@@ -5551,7 +5551,7 @@ to-regex@^3.0.1, to-regex@^3.0.2:
 
 toposort@^2.0.2:
   version "2.0.2"
-  resolved "http://r.cnpmjs.org/toposort/download/toposort-2.0.2.tgz#ae21768175d1559d48bef35420b2f4962f09c330"
+  resolved "https://r.cnpmjs.org/toposort/download/toposort-2.0.2.tgz#ae21768175d1559d48bef35420b2f4962f09c330"
   integrity sha1-riF2gXXRVZ1IvvNUILL0li8JwzA=
 
 touch@^3.1.0:
@@ -5594,7 +5594,7 @@ trim-right@^1.0.1:
 
 ts-invariant@^0.4.0:
   version "0.4.4"
-  resolved "http://r.cnpmjs.org/ts-invariant/download/ts-invariant-0.4.4.tgz#97a523518688f93aafad01b0e80eb803eb2abd86"
+  resolved "https://r.cnpmjs.org/ts-invariant/download/ts-invariant-0.4.4.tgz#97a523518688f93aafad01b0e80eb803eb2abd86"
   integrity sha1-l6UjUYaI+TqvrQGw6A64A+sqvYY=
   dependencies:
     tslib "^1.9.3"
@@ -5620,7 +5620,7 @@ tslib@^1.9.0:
 
 tslib@^1.9.3:
   version "1.10.0"
-  resolved "http://r.cnpmjs.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  resolved "https://r.cnpmjs.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
 
 tunnel-agent@^0.6.0:
@@ -5697,7 +5697,7 @@ unzip-response@^2.0.1:
 
 upath@^1.1.1:
   version "1.2.0"
-  resolved "http://r.cnpmjs.org/upath/download/upath-1.2.0.tgz#8f66dbcd55a883acdae4408af8b035a5044c1894"
+  resolved "https://r.cnpmjs.org/upath/download/upath-1.2.0.tgz#8f66dbcd55a883acdae4408af8b035a5044c1894"
   integrity sha1-j2bbzVWog6za5ECK+LA1pQRMGJQ=
 
 update-notifier@^2.3.0, update-notifier@^2.5.0:
@@ -5840,7 +5840,7 @@ whatwg-fetch@2.0.4:
 
 whatwg-fetch@3.0.0, whatwg-fetch@>=0.10.0:
   version "3.0.0"
-  resolved "http://r.cnpmjs.org/whatwg-fetch/download/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
+  resolved "https://r.cnpmjs.org/whatwg-fetch/download/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha1-/IBORYzEYACbGiuWa8iBfSV4rvs=
 
 which-module@^2.0.0:
@@ -5857,7 +5857,7 @@ which@^1.2.10, which@^1.2.14, which@^1.2.9:
 
 which@^2.0.1:
   version "2.0.1"
-  resolved "http://r.cnpmjs.org/which/download/which-2.0.1.tgz#f1cf94d07a8e571b6ff006aeb91d0300c47ef0a4"
+  resolved "https://r.cnpmjs.org/which/download/which-2.0.1.tgz#f1cf94d07a8e571b6ff006aeb91d0300c47ef0a4"
   integrity sha1-8c+U0HqOVxtv8AauuR0DAMR+8KQ=
   dependencies:
     isexe "^2.0.0"
@@ -6069,7 +6069,7 @@ yn@^2.0.0:
 
 yup@^0.27.0:
   version "0.27.0"
-  resolved "http://r.cnpmjs.org/yup/download/yup-0.27.0.tgz#f8cb198c8e7dd2124beddc2457571329096b06e7"
+  resolved "https://r.cnpmjs.org/yup/download/yup-0.27.0.tgz#f8cb198c8e7dd2124beddc2457571329096b06e7"
   integrity sha1-+MsZjI590hJL7dwkV1cTKQlrBuc=
   dependencies:
     "@babel/runtime" "^7.0.0"
@@ -6100,7 +6100,7 @@ zen-observable-ts@^0.8.11:
 
 zen-observable-ts@^0.8.20:
   version "0.8.20"
-  resolved "http://r.cnpmjs.org/zen-observable-ts/download/zen-observable-ts-0.8.20.tgz#44091e335d3fcbc97f6497e63e7f57d5b516b163"
+  resolved "https://r.cnpmjs.org/zen-observable-ts/download/zen-observable-ts-0.8.20.tgz#44091e335d3fcbc97f6497e63e7f57d5b516b163"
   integrity sha1-RAkeM10/y8l/ZJfmPn9X1bUWsWM=
   dependencies:
     tslib "^1.9.3"
