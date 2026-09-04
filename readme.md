@@ -11,10 +11,13 @@ docker compose up -d db
 npm ci
 npm run prisma:generate
 npm run prisma:validate
+npm run prisma:push
 npm run dev
 ```
 
 GraphQL endpoint：`http://127.0.0.1:7200/graphql`。
+
+`prisma:push` 只用于上面的全新本地空数据库。不要对已有数据或生产数据库执行该命令。
 
 ## 验证
 
@@ -28,7 +31,7 @@ npm run security:check
 
 ## 现有 Prisma 1 数据库迁移
 
-不要直接对生产库执行 `prisma migrate deploy`。Prisma 1 创建的表名、外键和隐式多对多连接表可能与新 schema 的默认命名不同。
+不要直接对生产库执行 `prisma db push` 或 `prisma migrate deploy`。Prisma 1 创建的表名、外键和隐式多对多连接表可能与新 schema 的默认命名不同。
 
 1. 完整备份生产数据库，并恢复到隔离的演练实例。
 2. 把 `DATABASE_URL` 指向演练实例，保存当前 `prisma/schema.prisma` 后运行 `npm run prisma:pull`。
