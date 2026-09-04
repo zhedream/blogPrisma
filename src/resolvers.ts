@@ -5,6 +5,9 @@ type Context = { prisma: PrismaClient };
 type Args = Record<string, any>;
 
 const articleRelations = { tags: true, type: true } as const;
+const taxonomyRelations = {
+  articles: { include: articleRelations }
+} as const;
 
 function takeFrom(args: Args) {
   if (typeof args.first === "number") return args.first;
@@ -56,21 +59,21 @@ export const resolvers = {
       ]);
       return { aggregate: { count }, nodes };
     },
-    tag: (_: unknown, { where }: Args, { prisma }: Context) => prisma.tag.findUnique({ where, include: { articles: true } }),
-    tags: (_: unknown, args: Args, { prisma }: Context) => prisma.tag.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: { articles: true } }),
+    tag: (_: unknown, { where }: Args, { prisma }: Context) => prisma.tag.findUnique({ where, include: taxonomyRelations }),
+    tags: (_: unknown, args: Args, { prisma }: Context) => prisma.tag.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: taxonomyRelations }),
     tagsConnection: async (_: unknown, args: Args, { prisma }: Context) => {
       const [count, nodes] = await prisma.$transaction([
         prisma.tag.count({ where: args.where }),
-        prisma.tag.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: { articles: true } })
+        prisma.tag.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: taxonomyRelations })
       ]);
       return { aggregate: { count }, nodes };
     },
-    category: (_: unknown, { where }: Args, { prisma }: Context) => prisma.category.findUnique({ where, include: { articles: true } }),
-    categories: (_: unknown, args: Args, { prisma }: Context) => prisma.category.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: { articles: true } }),
+    category: (_: unknown, { where }: Args, { prisma }: Context) => prisma.category.findUnique({ where, include: taxonomyRelations }),
+    categories: (_: unknown, args: Args, { prisma }: Context) => prisma.category.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: taxonomyRelations }),
     categoriesConnection: async (_: unknown, args: Args, { prisma }: Context) => {
       const [count, nodes] = await prisma.$transaction([
         prisma.category.count({ where: args.where }),
-        prisma.category.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: { articles: true } })
+        prisma.category.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: taxonomyRelations })
       ]);
       return { aggregate: { count }, nodes };
     }
