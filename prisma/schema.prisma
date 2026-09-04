@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Author {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  email     String   @unique
+  avatar    String?
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Visitor {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String?  @unique
+  hash      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Article {
+  id           String     @id @default(cuid())
+  title        String
+  desc         String?    @db.Text
+  md           String?    @db.LongText
+  html         String?    @db.LongText
+  catalogue    String?    @db.Text
+  clickCount   Int        @default(0)
+  readCount    Int        @default(0)
+  commentCount Int        @default(0)
+  isPublished  Boolean    @default(false)
+  typeId       String?
+  type         Category?  @relation(fields: [typeId], references: [id], onDelete: SetNull)
+  tags         Tag[]
+  comments     Comment[]
+  subjects     Subject[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@index([typeId])
+  @@index([isPublished, createdAt])
+}
+
+model Tag {
+  id        String    @id @default(cuid())
+  name      String?   @unique
+  articles  Article[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  name      String?   @unique
+  articles  Article[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String   @db.Text
+  name      String?
+  email     String?
+  articleId String
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([articleId])
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Subject {
+  id       String    @id @default(cuid())
+  name     String?
+  articles Article[]
+}
