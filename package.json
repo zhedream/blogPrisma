@@ -11,7 +11,9 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "start": "tsx src/index.ts",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit",
+    "security:check": "node scripts/check-dependencies.mjs",
     "prisma:generate": "prisma generate",
     "prisma:validate": "prisma validate",
     "prisma:pull": "prisma db pull",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@types/node": "24.10.0",
     "prisma": "7.10.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "5.0.0"
   }
 }

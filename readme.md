@@ -19,11 +19,12 @@ GraphQL endpoint：`http://127.0.0.1:7200/graphql`。
 ## 验证
 
 ```bash
+npm test
 npm run typecheck
-npm ls brace-expansion --all
+npm run security:check
 ```
 
-第二条命令应为空；本仓库不再包含 CVE-2026-69152 所影响的依赖。
+安全检查会拒绝 CVE-2026-69152 所影响的 `brace-expansion` 版本，以及锁文件中的非官方 npm 镜像地址。
 
 ## 现有 Prisma 1 数据库迁移
 
