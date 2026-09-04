@@ -6,7 +6,10 @@ type Args = Record<string, any>;
 
 const articleRelations = { tags: true, type: true } as const;
 const taxonomyRelations = {
-  articles: { include: articleRelations }
+  articles: {
+    where: { isPublished: true },
+    include: articleRelations
+  }
 } as const;
 
 function takeFrom(args: Args) {
