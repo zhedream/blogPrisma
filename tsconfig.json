@@ -9,5 +9,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["prisma.config.ts", "src/**/*.ts"]
+  "include": ["api/**/*.ts", "prisma.config.ts", "src/**/*.ts"]
 }

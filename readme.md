@@ -45,4 +45,4 @@ npm run security:check
 
 `DATABASE_URL`、`DB_CONNECTION_LIMIT`、`PORT` 和 `NODE_ENV` 由部署环境注入。PM2 示例见 `ecosystem.config.cjs`；不要把 `.env` 或数据库密码提交到 Git。
 
-Vercel 会在安装依赖后自动生成 Prisma Client，并把 `src/index.ts` 识别为 Node 服务入口。`GET /health` 不访问数据库，可用于部署探活；GraphQL 请求仍必须配置真实 `DATABASE_URL`。Serverless 环境建议把 `DB_CONNECTION_LIMIT` 设为 `3` 或更低。
+Vercel 会在安装依赖后自动生成 Prisma Client。Function 入口分别为 `GET /api/health` 和 `/api/graphql`；本地服务仍使用 `/health` 和 `/graphql`。探活不访问数据库，GraphQL 请求仍必须配置真实 `DATABASE_URL`。Serverless 环境建议把 `DB_CONNECTION_LIMIT` 设为 `3` 或更低。
