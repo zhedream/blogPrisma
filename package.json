@@ -19,7 +19,8 @@
     "prisma:validate": "prisma validate",
     "prisma:pull": "prisma db pull",
     "prisma:push": "prisma db push",
-    "prisma:migrate": "prisma migrate deploy"
+    "prisma:migrate": "prisma migrate deploy",
+    "db:bootstrap:test": "node scripts/bootstrap-test-database.mjs"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "7.10.0",
