@@ -21,6 +21,9 @@ function getPrisma() {
     user: decodeURIComponent(url.username),
     password: decodeURIComponent(url.password),
     database: decodeURIComponent(url.pathname.slice(1)),
+    // TiDB Cloud public endpoints require TLS. The MariaDB driver validates
+    // the Let's Encrypt certificate against Node's system CA store.
+    ssl: true,
     connectionLimit: Number(process.env.DB_CONNECTION_LIMIT || 3)
   });
   prisma = new PrismaClient({ adapter });
