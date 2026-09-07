@@ -1,46 +1,103 @@
-# import Post, User, Role, UserRole AvailableRoles from "../generated/prisma.graphql"
-type Query {
-  # Article
-  article(where: ArticleWhereUniqueInput!): Article
-  articles(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Article]!
-  articlesConnection(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ArticleConnection!
-    # tag
-  tag(where: TagWhereUniqueInput!): Tag
-  tags(where: TagWhereInput, orderBy: TagOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Tag]!
-  tagsConnection(where: TagWhereInput, orderBy: TagOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): TagConnection!
-  # category
-  category(where: CategoryWhereUniqueInput!): Category
-  categories(where: CategoryWhereInput, orderBy: CategoryOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Category]!
-  categoriesConnection(where: CategoryWhereInput, orderBy: CategoryOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CategoryConnection!
+scalar DateTime
 
+enum SortOrder { asc desc }
+
+type Article {
+  id: ID!
+  title: String!
+  desc: String
+  md: String
+  html: String
+  catalogue: String
+  clickCount: Int!
+  readCount: Int!
+  commentCount: Int!
+  isPublished: Boolean!
+  type: Category
+  tags: [Tag!]!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Tag { id: ID!, name: String, articles: [Article!]!, createdAt: DateTime!, updatedAt: DateTime! }
+type Category { id: ID!, name: String, articles: [Article!]!, createdAt: DateTime!, updatedAt: DateTime! }
+type Aggregate { count: Int! }
+type ArticleConnection { aggregate: Aggregate!, nodes: [Article!]! }
+type TagConnection { aggregate: Aggregate!, nodes: [Tag!]! }
+type CategoryConnection { aggregate: Aggregate!, nodes: [Category!]! }
+type BatchPayload { count: Int! }
+
+input ArticleWhereUniqueInput { id: ID! }
+input ArticleWhereInput { id: ID, title: String, isPublished: Boolean, typeId: ID, AND: [ArticleWhereInput!], OR: [ArticleWhereInput!] }
+input ArticleOrderByInput { title: SortOrder, clickCount: SortOrder, createdAt: SortOrder, updatedAt: SortOrder }
+input ArticleCreateInput {
+  title: String!
+  desc: String
+  md: String
+  html: String
+  catalogue: String
+  clickCount: Int
+  readCount: Int
+  commentCount: Int
+  isPublished: Boolean
+  typeId: ID
+  tagIds: [ID!]
+}
+input ArticleUpdateInput {
+  title: String
+  desc: String
+  md: String
+  html: String
+  catalogue: String
+  clickCount: Int
+  readCount: Int
+  commentCount: Int
+  isPublished: Boolean
+  typeId: ID
+  tagIds: [ID!]
+}
+
+input TagWhereUniqueInput { id: ID, name: String }
+input TagWhereInput { id: ID, name: String }
+input TagOrderByInput { name: SortOrder, createdAt: SortOrder, updatedAt: SortOrder }
+input TagCreateInput { name: String }
+input TagUpdateInput { name: String }
+
+input CategoryWhereUniqueInput { id: ID, name: String }
+input CategoryWhereInput { id: ID, name: String }
+input CategoryOrderByInput { name: SortOrder, createdAt: SortOrder, updatedAt: SortOrder }
+input CategoryCreateInput { name: String }
+input CategoryUpdateInput { name: String }
+
+type Query {
+  article(where: ArticleWhereUniqueInput!): Article
+  articles(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, first: Int, last: Int): [Article!]!
+  articlesConnection(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, first: Int, last: Int): ArticleConnection!
+  tag(where: TagWhereUniqueInput!): Tag
+  tags(where: TagWhereInput, orderBy: TagOrderByInput, skip: Int, first: Int, last: Int): [Tag!]!
+  tagsConnection(where: TagWhereInput, orderBy: TagOrderByInput, skip: Int, first: Int, last: Int): TagConnection!
+  category(where: CategoryWhereUniqueInput!): Category
+  categories(where: CategoryWhereInput, orderBy: CategoryOrderByInput, skip: Int, first: Int, last: Int): [Category!]!
+  categoriesConnection(where: CategoryWhereInput, orderBy: CategoryOrderByInput, skip: Int, first: Int, last: Int): CategoryConnection!
 }
 
 type Mutation {
-  # Article
   createArticle(data: ArticleCreateInput!): Article!
   updateArticle(data: ArticleUpdateInput!, where: ArticleWhereUniqueInput!): Article
-  updateManyArticles(data: ArticleUpdateManyMutationInput!, where: ArticleWhereInput): BatchPayload!
+  updateManyArticles(data: ArticleUpdateInput!, where: ArticleWhereInput): BatchPayload!
   upsertArticle(where: ArticleWhereUniqueInput!, create: ArticleCreateInput!, update: ArticleUpdateInput!): Article!
   deleteArticle(where: ArticleWhereUniqueInput!): Article
   deleteManyArticles(where: ArticleWhereInput): BatchPayload!
-  # tag
   createTag(data: TagCreateInput!): Tag!
   updateTag(data: TagUpdateInput!, where: TagWhereUniqueInput!): Tag
-  updateManyTags(data: TagUpdateManyMutationInput!, where: TagWhereInput): BatchPayload!
+  updateManyTags(data: TagUpdateInput!, where: TagWhereInput): BatchPayload!
   upsertTag(where: TagWhereUniqueInput!, create: TagCreateInput!, update: TagUpdateInput!): Tag!
-  deleteTag(where: TagWhereUniqueInput!): Tag  
+  deleteTag(where: TagWhereUniqueInput!): Tag
   deleteManyTags(where: TagWhereInput): BatchPayload!
-  # category
   createCategory(data: CategoryCreateInput!): Category!
   updateCategory(data: CategoryUpdateInput!, where: CategoryWhereUniqueInput!): Category
-  updateManyCategories(data: CategoryUpdateManyMutationInput!, where: CategoryWhereInput): BatchPayload!
+  updateManyCategories(data: CategoryUpdateInput!, where: CategoryWhereInput): BatchPayload!
   upsertCategory(where: CategoryWhereUniqueInput!, create: CategoryCreateInput!, update: CategoryUpdateInput!): Category!
   deleteCategory(where: CategoryWhereUniqueInput!): Category
   deleteManyCategories(where: CategoryWhereInput): BatchPayload!
-}
-
-type Subscription {
-  article(where: ArticleSubscriptionWhereInput): ArticleSubscriptionPayload
-  tag(where: TagSubscriptionWhereInput): TagSubscriptionPayload
-  category(where: CategorySubscriptionWhereInput): CategorySubscriptionPayload
 }
