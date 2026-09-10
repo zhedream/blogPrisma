@@ -4,7 +4,8 @@ import { fileURLToPath } from "node:url";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { createSchema, createYoga } from "graphql-yoga";
 import { PrismaClient } from "./generated/prisma/client.js";
-import { resolvers } from "./resolvers.js";
+import { isAdmin } from "./auth.js";
+import { resolvers, type Context } from "./resolvers.js";
 
 let prisma: PrismaClient | undefined;
 
@@ -35,7 +36,7 @@ const typeDefs = readFileSync(fileURLToPath(new URL("./schema/schema.graphql", i
 export const yoga = createYoga({
   graphqlEndpoint: process.env.VERCEL ? "/api/graphql" : "/graphql",
   schema: createSchema({ typeDefs, resolvers }),
-  context: () => ({ prisma: getPrisma() }),
+  context: ({ request }): Context => ({ get prisma() { return getPrisma(); }, isAdmin: isAdmin(request) }),
   graphiql: process.env.NODE_ENV !== "production",
   disposeOnProcessTerminate: true
 });
