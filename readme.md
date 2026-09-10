@@ -46,3 +46,11 @@ npm run security:check
 `DATABASE_URL`、`DB_CONNECTION_LIMIT`、`PORT` 和 `NODE_ENV` 由部署环境注入。PM2 示例见 `ecosystem.config.cjs`；不要把 `.env` 或数据库密码提交到 Git。
 
 Vercel 会在安装依赖后自动生成 Prisma Client。Function 入口分别为 `GET /api/health` 和 `/api/graphql`；本地服务仍使用 `/health` 和 `/graphql`。探活不访问数据库，GraphQL 请求仍必须配置真实 `DATABASE_URL`。Serverless 环境建议把 `DB_CONNECTION_LIMIT` 设为 `3` 或更低。
+
+## Blog Admin v2 配套鉴权
+
+设置服务端 `ADMIN_API_TOKEN`（至少 32 字符的随机密钥，例如 `openssl rand -hex 32`），在后台登录页面输入相同密钥。不要提交密钥，也不要放进 `VITE_*` 环境变量。未配置时所有写操作关闭；前台公开文章读取不受影响。
+
+后台请求通过 `Authorization: Bearer …` 验证；`adminSession` 用于登录验证，不访问数据库。所有 Mutation 必须鉴权。匿名文章查询（包括按 ID、连接计数、嵌套分类/标签）只返回公开文章。管理密钥轮换会立即使旧密钥失效；这是单管理员方案，没有用户注册、角色分配或服务端会话。建议只通过 HTTPS 使用，并在部署平台设置请求限流。
+
+文章筛选新增 `title_contains`，原有 `title` 精确匹配保持兼容。后台保存使用 `typeId` 和 `tagIds`，清空分类传 `typeId: null`，清空标签传 `tagIds: []`。本次不修改数据库结构。

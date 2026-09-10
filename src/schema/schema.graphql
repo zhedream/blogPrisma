@@ -28,7 +28,7 @@ type CategoryConnection { aggregate: Aggregate!, nodes: [Category!]! }
 type BatchPayload { count: Int! }
 
 input ArticleWhereUniqueInput { id: ID! }
-input ArticleWhereInput { id: ID, title: String, isPublished: Boolean, typeId: ID, AND: [ArticleWhereInput!], OR: [ArticleWhereInput!] }
+input ArticleWhereInput { id: ID, title: String, title_contains: String, isPublished: Boolean, typeId: ID, AND: [ArticleWhereInput!], OR: [ArticleWhereInput!] }
 input ArticleOrderByInput { title: SortOrder, clickCount: SortOrder, createdAt: SortOrder, updatedAt: SortOrder }
 input ArticleCreateInput {
   title: String!
@@ -70,6 +70,7 @@ input CategoryCreateInput { name: String }
 input CategoryUpdateInput { name: String }
 
 type Query {
+  adminSession: Boolean!
   article(where: ArticleWhereUniqueInput!): Article
   articles(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, first: Int, last: Int): [Article!]!
   articlesConnection(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, first: Int, last: Int): ArticleConnection!

@@ -1,7 +1,9 @@
 import { GraphQLScalarType, Kind } from "graphql";
 import type { PrismaClient } from "./generated/prisma/client.js";
 
-type Context = { prisma: PrismaClient };
+import { requireAdmin } from "./auth.js";
+
+export type Context = { prisma: PrismaClient; isAdmin?: boolean };
 type Args = Record<string, any>;
 
 const articleRelations = { tags: true, type: true } as const;
@@ -50,12 +52,36 @@ const DateTime = new GraphQLScalarType({
   }
 });
 
-export const resolvers = {
+function articleWhere(where: Args = {}, admin = false): any {
+  const { title_contains, AND, OR, ...rest } = where;
+  const filter = {
+    ...rest,
+    ...(title_contains !== undefined ? { title: { contains: title_contains } } : {}),
+    ...(AND ? { AND: AND.map((item: Args) => articleWhere(item, true)) } : {}),
+    ...(OR ? { OR: OR.map((item: Args) => articleWhere(item, true)) } : {})
+  };
+  return admin ? filter : { AND: [filter, { isPublished: true }] };
+}
+
+function safeArticleArgs(args: Args, context: Context): Args {
+  return { ...args, where: articleWhere(args.where, context.isAdmin) };
+}
+
+const publicResolvers = {
   DateTime,
   Query: {
-    article: (_: unknown, { where }: Args, { prisma }: Context) => prisma.article.findUnique({ where, include: articleRelations }),
-    articles: (_: unknown, args: Args, { prisma }: Context) => prisma.article.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: articleRelations }),
-    articlesConnection: async (_: unknown, args: Args, { prisma }: Context) => {
+    adminSession: (_: unknown, __: Args, context: Context) => { requireAdmin(context); return true; },
+    article: async (_: unknown, { where }: Args, context: Context) => {
+      const article = await context.prisma.article.findUnique({ where, include: articleRelations });
+      return article && (context.isAdmin || article.isPublished) ? article : null;
+    },
+    articles: (_: unknown, args: Args, context: Context) => {
+      const safe = safeArticleArgs(args, context);
+      return context.prisma.article.findMany({ where: safe.where, orderBy: safe.orderBy, skip: safe.skip, take: takeFrom(safe), include: articleRelations });
+    },
+    articlesConnection: async (_: unknown, args: Args, context: Context) => {
+      const { prisma } = context;
+      args = safeArticleArgs(args, context);
       const [count, nodes] = await prisma.$transaction([
         prisma.article.count({ where: args.where }),
         prisma.article.findMany({ where: args.where, orderBy: args.orderBy, skip: args.skip, take: takeFrom(args), include: articleRelations })
@@ -101,4 +127,16 @@ export const resolvers = {
     deleteCategory: (_: unknown, { where }: Args, { prisma }: Context) => prisma.category.delete({ where }),
     deleteManyCategories: (_: unknown, { where }: Args, { prisma }: Context) => prisma.category.deleteMany({ where })
   }
+};
+
+// Central enforcement covers every mutation, including aliases and batched fields.
+export const resolvers = {
+  ...publicResolvers,
+  Mutation: Object.fromEntries(Object.entries(publicResolvers.Mutation).map(([name, resolve]) => [
+    name, (parent: unknown, args: Args, context: Context) => {
+      requireAdmin(context);
+      if (args.where && (name.includes("Articles"))) args = { ...args, where: articleWhere(args.where, true) };
+      return resolve(parent, args, context);
+    }
+  ]))
 };
