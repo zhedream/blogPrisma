@@ -80,6 +80,12 @@ describe("administrator boundary", () => {
     expect(prisma.article.create.mock.calls[0][0].data).toMatchObject({
       type: { connect: { id: "c1" } }, tags: { connect: [{ id: "t1" }] }
     });
+    await run("mutation($data:ArticleCreateInput!){createArticle(data:$data){id}}", {
+      data: { title: "Uncategorized", typeId: null, tagIds: [] }
+    });
+    expect(prisma.article.create.mock.calls[1][0].data).toEqual({
+      title: "Uncategorized", tags: { connect: [] }
+    });
     await run('mutation($data:ArticleUpdateInput!){updateArticle(where:{id:"article-1"},data:$data){id}}', {
       data: { typeId: null, tagIds: [] }
     });

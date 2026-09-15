@@ -24,9 +24,11 @@ function articleData(data: Args, update = false): any {
   const { typeId, tagIds, ...scalars } = data;
   return {
     ...scalars,
-    ...(typeId !== undefined
-      ? { type: typeId ? { connect: { id: typeId } } : { disconnect: true } }
-      : {}),
+    ...(typeId
+      ? { type: { connect: { id: typeId } } }
+      : typeId === null && update
+        ? { type: { disconnect: true } }
+        : {}),
     ...(tagIds !== undefined
       ? { tags: { [update ? "set" : "connect"]: tagIds.map((id: string) => ({ id })) } }
       : {})
