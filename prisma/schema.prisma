@@ -37,7 +37,7 @@ model Article {
   readCount    Int        @default(0)
   commentCount Int        @default(0)
   isPublished  Boolean    @default(false)
-  typeId       String?
+  typeId       String?    @map("type")
   type         Category?  @relation(fields: [typeId], references: [id], onDelete: SetNull)
   tags         Tag[]
   comments     Comment[]
@@ -70,8 +70,8 @@ model Comment {
   content   String   @db.Text
   name      String?
   email     String?
-  articleId String
-  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  articleId String?   @map("article")
+  article   Article? @relation(fields: [articleId], references: [id], onDelete: SetNull)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
