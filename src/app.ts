@@ -16,15 +16,15 @@ function getPrisma() {
   if (!databaseUrl) throw new Error("DATABASE_URL is required for GraphQL requests");
 
   const url = new URL(databaseUrl);
+  const useSsl = process.env.DATABASE_SSL === "true" || process.env.DATABASE_SSL === "1";
   const adapter = new PrismaMariaDb({
     host: url.hostname,
     port: Number(url.port || 3306),
     user: decodeURIComponent(url.username),
     password: decodeURIComponent(url.password),
     database: decodeURIComponent(url.pathname.slice(1)),
-    // TiDB Cloud public endpoints require TLS. The MariaDB driver validates
-    // the Let's Encrypt certificate against Node's system CA store.
-    ssl: true,
+    // TiDB Cloud public endpoints require TLS; local MariaDB typically does not.
+    ...(useSsl ? { ssl: true } : {}),
     connectionLimit: Number(process.env.DB_CONNECTION_LIMIT || 3)
   });
   prisma = new PrismaClient({ adapter });
